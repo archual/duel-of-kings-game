@@ -1,0 +1,33 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-css-modules"
+  ],
+  "rules": {
+    "color-hex-case" : [
+      "upper"
+    ],
+    "indentation": 2,
+    "at-rule-no-unknown": [
+      true, 
+      {
+        "ignoreAtRules": ["function", "if", "each", "include", "mixin", "for", "else", "return"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown" :[
+      true, {
+        "ignorePseudoClasses": ["global", "export"]
+      }
+    ],
+    "selector-no-qualifying-type": [
+      true, {
+        "ignore": ["attribute", "class", "id"]
+      }
+    ],
+    "no-descending-specificity": null,
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}
