@@ -16,7 +16,8 @@
   "homepage": "https://github.com/archual/project_fe_template#readme",
   "scripts": {
     "dev": "cross-env DEBUG=true webpack --mode development --watch",
-    "devserver": "cross-env DEBUG=true webpack-dev-server --open",
+    "devserver": "cross-env DEBUG=true webpack-dev-server",
+    "devserver2": "cross-env DEBUG=true webpack-dev-server --content-base src --hot --inline",
     "build": "webpack --mode production",
     "test": "jest --env=jsdom",
     "clear": "rimraf .cache && rimraf public",

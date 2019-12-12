@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { gameConfig } from '../index';
 
 class Author extends Phaser.Scene {
   constructor() {
@@ -8,14 +9,15 @@ class Author extends Phaser.Scene {
   create() {
     //  Our tiled scrolling background
     const land = this.add.tileSprite(0, 0, 960, 540, 'startScreen');
-    land.fixedToCamera = true;
+    land.setScrollFactor(0);
 
-    const playButton = this.add.button(this.game.world.centerX, this.game.world.centerY, 'go', this.playTheGame, this);
-    playButton.anchor.setTo(0.5, 0.5);
+    const playButton = this.add.text(gameConfig.centerX, gameConfig.centerY, 'go');
+    playButton.setInteractive();
+    playButton.on('keydown', this.playTheGame);
   }
 
   playTheGame() {
-    this.state.start('Game');
+    this.scene.start('Game');
   }
 }
 

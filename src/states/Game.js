@@ -150,7 +150,7 @@ class Game extends Phaser.Scene {
     this.debugKey = this.input.keyboard.addKey(Phaser.Keyboard.D);
     this.debugKey.onDown.add(this.toggleDebug, this);
 
-    this.game.world.bringToTop(this.player);
+    this.scene.world.bringToTop(this.player);
 
     // player gravity
     this.player.body.gravity.y = 4500;
