@@ -81,6 +81,6 @@ module.exports = {
     devFlagPlugin,
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.js', '.jsx'],
   },
 };

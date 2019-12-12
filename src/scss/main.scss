@@ -1,3 +1,14 @@
 body {
-  background: #CCC;
+  background: #000;
+  padding: 0px;
+  margin: 0px;
+}
+
+canvas {
+  display: block;
+  margin: 0;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
